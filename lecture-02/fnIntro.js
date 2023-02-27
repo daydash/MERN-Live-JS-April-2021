@@ -1,3 +1,7 @@
+// fname();
+
+// hey();
+// hoisting
 
 // function fname(first, second, third){
 //     // statements
@@ -11,15 +15,15 @@
 
 // another();
 
-let hey = function(params){
+let hey = function (params) {
     console.log("Hello");
 }
 
 let arr = [];
 {
     let count = 10;
-    while(count > 0){
-        let fn = function(){
+    while (count > 0) {
+        let fn = function () {
             let think = String(count);
             console.log(think);
         }
