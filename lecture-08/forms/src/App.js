@@ -75,14 +75,14 @@ function App() {
   ];
 
   let handleChange = function (event) {
-    console.log(event.target.name, event.target.value);
+    // console.log(event.target.name, event.target.value);
 
     // let updated = { ...formData };
     // updated[event.target.name] = event.target.value;
     // setFormData(updated);
 
     let { name, value } = event.target;
-    setFormData({ [name]: value, ...formData });
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -108,7 +108,7 @@ function App() {
           className={classes.btn}
           variant="contained"
           color="primary"
-          style={{ flexGrow: 2 }}
+          style={{ flexGrow: 1 }}
           onClick={function () {
             axios
               .post("http://localhost:5000/submit", formData)
